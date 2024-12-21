@@ -8,7 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
-    "start": "astro preview"
+    "start": "astro preview --port $PORT"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.4",
