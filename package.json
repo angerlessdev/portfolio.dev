@@ -16,5 +16,9 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "10.x"
   }
 }
