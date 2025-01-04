@@ -1,11 +1,77 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import LinkedinIcon from "../components/icons/Linkedin.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Portfolio de Angel - Desarrollador y Programador Web"
+  description="Contrata a Angel como desarrollador web o movil."
+>
+  <main class="px-4">
+    <SectionContainer class="py-20 pb-20">
+      <img
+        class="rounded-full w-24 h-24 mb-4 object-cover object-center"
+        src="/images/angel-foto.jpg"
+        alt="angl-photoe"
+      />
+
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola, soy Angel Cancho <a
+          href="https://linkedin.com/in/angel-cancho"
+          target="_blank"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[900px]">
+        Estudiante de Ingeniería de Software en la Universidad Peruana de
+        Ciencias Aplicadas (UPC) - Octavo ciclo, apasionado por el desarrollo de
+        soluciones tecnológicas innovadoras. A lo largo de mi formación, he
+        adquirido experiencia trabajando con tecnologías como Flutter, Dart, y
+        .NET, y he desarrollado proyectos que combinan tanto el frontend como el
+        backend. Mi enfoque se centra en el diseño de arquitecturas robustas y
+        escalables, especialmente en microservicios y patrones de diseño como
+        DDD (Domain-Driven Design). Además, tengo experiencia en bases de datos
+        como SQL y SQLite, y me esfuerzo por mejorar mis habilidades de
+        desarrollo constantemente. Busco oportunidades de prácticas en empresas
+        donde pueda aplicar mis conocimientos y seguir aprendiendo en un entorno
+        colaborativo.
+      </h2>
+
+      <nav class="flex gap-x-4 mt-8 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/angel-cancho">
+          <LinkedinIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+
+        <SocialPill href="https://github.com/angerlessdev">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+
+        <SocialPill href="mailto:angelcca2001@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          Email
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
 </Layout>
